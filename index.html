@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Password Generator</title>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="flex flex-col justify-center h-auto bg-blue-600 w-full max-w-md p-6 rounded-lg shadow-lg shadow-gray-900">
+        <h1 class="text-white text-2xl font-bold text-center mb-4">Password Generator</h1> 
+
+        <div class="flex mb-4">
+            <input class="flex-1 rounded p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                   type="text" 
+                   readonly 
+                   id="password" 
+                   placeholder="Generated Password">
+            <button class="bg-gray-100 hover:bg-gray-300 text-blue-600 rounded p-2 ml-2">
+                Copy
+            </button>
+        </div>
+
+        <div class="flex flex-col gap-2 mb-4">
+            <label class="flex items-center">
+                <input type="checkbox" id="include-uppercase" class="mr-2">
+                <span class="text-white">Include Uppercase Letters</span>
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" id="include-lowercase" class="mr-2">
+                <span class="text-white">Include Lowercase Letters</span>
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" id="include-numbers" class="mr-2">
+                <span class="text-white">Include Numbers</span>
+            </label>
+            <label class="flex items-center">
+                <input type="checkbox" id="include-symbols" class="mr-2">
+                <span class="text-white">Include Symbols</span>
+            </label>
+        </div>
+
+        <div class="mb-4">
+            <label for="password-length" class="block text-white mb-1">Password Length</label>
+            <input 
+              type="number" 
+              id="password-length" 
+              class="border border-gray-300 p-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              min="4" 
+              max="50" 
+              value="12" 
+            />
+        </div>
+
+        <button class="w-full rounded bg-green-500 hover:bg-green-600 text-white p-2 font-semibold transition duration-200">
+            Generate Password
+        </button>
+    </div>
+</body>
+</html>
