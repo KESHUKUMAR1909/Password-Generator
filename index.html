@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+ 
     <title>Password Generator</title>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
@@ -16,7 +16,7 @@
                    readonly 
                    id="password" 
                    placeholder="Generated Password">
-            <button class="bg-gray-100 hover:bg-gray-300 text-blue-600 rounded p-2 ml-2">
+            <button id="copy" class="bg-gray-100 hover:bg-gray-300 text-blue-600 rounded p-2 ml-2">
                 Copy
             </button>
         </div>
@@ -52,9 +52,13 @@
             />
         </div>
 
-        <button class="w-full rounded bg-green-500 hover:bg-green-600 text-white p-2 font-semibold transition duration-200">
+        <button id="generate" class="w-full rounded bg-green-500 hover:bg-green-600 text-white p-2 font-semibold transition duration-200">
             Generate Password
         </button>
     </div>
+
+
+    <script src="script.js"> </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
